@@ -53,6 +53,13 @@ APPS = [
         "url": "https://03vozatextotraductor-n5czjghsaqreazrzvfegab.streamlit.app/",
         "boton": "Abrir voz a texto",
     },
+     {
+        "titulo": "Reconocimiento óptico de carácteres OCR",
+        "descripcion": "Una aplicacion que reconoce carácteres en imágenes",
+        "imagen": "OCR_1.jpg",
+        "url": "https://04imagenatextoocr-chcwdfglnahz4bewex9nrk.streamlit.app/",
+        "boton": "Abrir transcriptor",
+    },
     {
         "titulo": "Transcriptor de audio y video",
         "descripcion": "Cómo realizamos transcripciones de audio y video.",
