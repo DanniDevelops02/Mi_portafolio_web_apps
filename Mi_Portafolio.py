@@ -1,87 +1,284 @@
+from pathlib import Path
+
 import streamlit as st
 from PIL import Image
-st.title("Aplicaciones de Inteligencia Artificial.")
 
+st.set_page_config(
+    page_title="Portafolio · Aplicaciones de IA",
+    page_icon="🌊",
+    layout="wide",
+)
+
+# =====================================================================
+#  CONTENIDO EDITABLE: cambia aquí textos, enlaces e imágenes
+# =====================================================================
+ETIQUETA = "Portafolio · Daniel Flórez"
+TITULO = "Aplicaciones de Inteligencia Artificial"
+SUBTITULO = (
+    "Una colección de aplicaciones web que exploran cómo la inteligencia "
+    "artificial se integra con voz, imagen, datos y el mundo físico."
+)
+
+URL_RECURSOS = "https://sites.google.com/view/aplicacionesdeia/inicio"
+TEXTO_RECURSOS = "Ver páginas y ejercicios prácticos"
+
+SIDEBAR_TITULO = "Aplicaciones con Inteligencia Artificial."
+SIDEBAR_TEXTO = (
+    "La inteligencia artificial permite mejorar la toma de decisiones con el uso "
+    "de datos, automatizar tareas rutinarias y proporcionar análisis avanzados en "
+    "tiempo real, lo que resulta en una mayor eficiencia y precisión en diversos campos."
+)
+
+# Cada bloque { ... } es una tarjeta. Aparecen de 3 en 3, en el orden de esta lista.
+APPS = [
+    {
+        "titulo": "Conversión de texto a voz",
+        "descripcion": "Una de las aplicaciones de IA que convierte texto escrito en audio.",
+        "imagen": "txt_to_audio2.png",
+        "url": "https://imultimod.streamlit.app/",
+        "boton": "Abrir texto a voz",
+    },
+    {
+        "titulo": "Conversión de voz a texto",
+        "descripcion": "Una aplicación que usa la conversión de voz a texto.",
+        "imagen": "OIG8.jpg",
+        "url": "https://traductorw.streamlit.app/",
+        "boton": "Abrir voz a texto",
+    },
+    {
+        "titulo": "Transcriptor de audio y video",
+        "descripcion": "Cómo realizamos transcripciones de audio y video.",
+        "imagen": "OIG3.jpg",
+        "url": "https://transcript-whisper.streamlit.app/",
+        "boton": "Abrir transcriptor",
+    },
+    {
+        "titulo": "Reconocimiento de objetos",
+        "descripcion": "Cómo se detectan objetos en imágenes.",
+        "imagen": "txt_to_audio.png",
+        "url": "https://yolov5cmc.streamlit.app/",
+        "boton": "Abrir YOLO",
+    },
+    {
+        "titulo": "Análisis de imagen",
+        "descripcion": "La capacidad de análisis sobre imágenes.",
+        "imagen": "OIG4.jpg",
+        "url": "https://vision2-gpt4o.streamlit.app/",
+        "boton": "Abrir visión",
+    },
+    {
+        "titulo": "Sistema ciberfísico",
+        "descripcion": "La capacidad de interacción con el mundo físico.",
+        "imagen": "OIG6.jpg",
+        # OJO: esta URL es la misma que "Análisis de imagen". Revísala.
+        "url": "https://vision2-gpt4o.streamlit.app/",
+        "boton": "Abrir sistema ciberfísico",
+    },
+    {
+        "titulo": "Entrenando modelos",
+        "descripcion": "Cómo puedes usar tu propio modelo entrenado.",
+        "imagen": "OIG5.jpg",
+        "url": "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/",
+        "boton": "Abrir modelo entrenado",
+    },
+    {
+        "titulo": "Análisis de datos",
+        "descripcion": "Cómo se pueden analizar datos usando agentes.",
+        "imagen": "data_analisis.png",
+        "url": "https://dataagente.streamlit.app/",
+        "boton": "Abrir análisis de datos",
+    },
+    {
+        "titulo": "Generación en contexto",
+        "descripcion": "Una aplicación que usa RAG a partir de un documento PDF.",
+        "imagen": "Chat_pdf.png",
+        "url": "https://chatpdf-cc.streamlit.app/",
+        "boton": "Abrir RAG",
+    },
+]
+
+# =====================================================================
+#  ESTILO (paleta fría basada en #3f71a6)
+# =====================================================================
+PRIMARIO = "#3f71a6"
+OSCURO = "#1b2f45"
+CLARO = "#eaf2f9"
+SUAVE = "#a9c7e3"
+
+st.markdown(
+    f"""
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+    html, body, [class*="css"], .stApp {{
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem;
+    }}
+    .stApp {{
+        background: linear-gradient(180deg, #f6fafd 0%, {CLARO} 100%);
+    }}
+    .block-container {{
+        max-width: 1100px;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }}
+
+    /* Hero */
+    .hero {{ text-align: center; padding: 1rem 0 .5rem 0; }}
+    .hero .etiqueta {{
+        color: {PRIMARIO};
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        font-size: .85rem;
+        font-weight: 600;
+    }}
+    .hero h1 {{
+        font-family: 'Playfair Display', serif;
+        font-size: 3.2rem;
+        color: {OSCURO};
+        margin: .3rem 0 .6rem 0;
+        line-height: 1.1;
+    }}
+    .hero p {{
+        color: #4d6479;
+        font-size: 1.2rem;
+        max-width: 680px;
+        margin: 0 auto;
+    }}
+    .linea {{
+        width: 70px; height: 4px; border-radius: 4px;
+        background: {PRIMARIO};
+        margin: 1.4rem auto 1rem auto;
+    }}
+
+    /* Tarjetas */
+    [data-testid="stVerticalBlockBorderWrapper"] {{
+        background: white;
+        border: 1px solid {SUAVE}66 !important;
+        border-radius: 18px !important;
+        box-shadow: 0 8px 24px rgba(63, 113, 166, .08);
+        padding: .5rem .6rem .8rem .6rem;
+        transition: transform .2s ease, box-shadow .2s ease;
+    }}
+    [data-testid="stVerticalBlockBorderWrapper"]:hover {{
+        transform: translateY(-3px);
+        box-shadow: 0 14px 32px rgba(63, 113, 166, .16);
+    }}
+
+    /* Imágenes con proporción uniforme */
+    [data-testid="stImage"] img {{
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        border-radius: 14px;
+    }}
+    .sin-imagen {{
+        aspect-ratio: 16 / 10;
+        border-radius: 14px;
+        background: {CLARO};
+        color: {PRIMARIO};
+        display: flex; align-items: center; justify-content: center;
+        font-weight: 600;
+    }}
+
+    .tarjeta-titulo {{
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: {OSCURO};
+        margin: .7rem 0 .3rem 0;
+        min-height: 2.6em;
+        line-height: 1.3;
+    }}
+    .tarjeta-desc {{
+        color: #4d6479;
+        font-size: .98rem;
+        min-height: 3.2em;
+        margin-bottom: .6rem;
+    }}
+
+    /* Botones de enlace */
+    .stLinkButton a, [data-testid^="stBaseLinkButton"] {{
+        background: {PRIMARIO} !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 999px !important;
+        font-weight: 600;
+        padding: .5rem 1.4rem;
+        transition: all .2s ease;
+    }}
+    .stLinkButton a:hover, [data-testid^="stBaseLinkButton"]:hover {{
+        background: {OSCURO} !important;
+        color: white !important;
+    }}
+
+    /* Sidebar */
+    [data-testid="stSidebar"] {{ background: {OSCURO}; }}
+    [data-testid="stSidebar"] * {{ color: #e6f0f9 !important; }}
+
+    #MainMenu, footer {{ visibility: hidden; }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# =====================================================================
+#  FUNCIONES AUXILIARES
+# =====================================================================
+BASE = Path(__file__).parent
+
+
+def mostrar_imagen(nombre: str) -> None:
+    """Busca la imagen primero en la carpeta 'imagenes/' y luego junto a Intro.py."""
+    for carpeta in (BASE / "imagenes", BASE):
+        ruta = carpeta / nombre
+        if ruta.is_file():
+            st.image(Image.open(ruta), use_container_width=True)
+            return
+    st.markdown('<div class="sin-imagen">Imagen no encontrada</div>', unsafe_allow_html=True)
+
+
+# =====================================================================
+#  PÁGINA
+# =====================================================================
 with st.sidebar:
-  st.subheader("Aplicaciones con Inteligencia Artificial.")
-  parrafo = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-    "resulta en una mayor eficiencia y precisión en diversos campos."
-  )
-  st.write(parrafo)
+    st.subheader(SIDEBAR_TITULO)
+    st.write(SIDEBAR_TEXTO)
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3 = st.columns(3)
+st.markdown(
+    f"""
+    <div class="hero">
+        <div class="etiqueta">{ETIQUETA}</div>
+        <h1>{TITULO}</h1>
+        <p>{SUBTITULO}</p>
+        <div class="linea"></div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
-with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
+_, centro, _ = st.columns([1, 1.4, 1])
+with centro:
+    st.link_button(TEXTO_RECURSOS, URL_RECURSOS, use_container_width=True)
 
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://yolov5cmc.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+st.write("")
+st.write("")
 
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
-
-with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductorw.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
-
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://dataagente.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
-
- st.subheader("Trasnscriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
-
-
-with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
-
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
-
-
+# Cuadrícula de 3 columnas
+for i in range(0, len(APPS), 3):
+    columnas = st.columns(3, gap="medium")
+    for columna, app in zip(columnas, APPS[i : i + 3]):
+        with columna:
+            with st.container(border=True):
+                mostrar_imagen(app["imagen"])
+                st.markdown(
+                    f'<div class="tarjeta-titulo">{app["titulo"]}</div>'
+                    f'<div class="tarjeta-desc">{app["descripcion"]}</div>',
+                    unsafe_allow_html=True,
+                )
+                st.link_button(
+                    app.get("boton", "Abrir aplicación"),
+                    app["url"],
+                    use_container_width=True,
+                )
+    st.write("")
