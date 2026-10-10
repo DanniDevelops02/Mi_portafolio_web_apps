@@ -42,7 +42,7 @@ APPS = [
     {
         "titulo": "Texto a audio",
         "descripcion": "Esta aplicación utiliza IA básica para convertir texto escrito en audio.",
-        "imagen": "Childrens_Storybook",
+        "imagen": "Childrens_Storybook.jpg",
         "url": "https://02textoaaudio-e7a7ia4qwuljkwhdgzpbgx.streamlit.app/",
         "boton": "¡Crea un audio!",
     },
