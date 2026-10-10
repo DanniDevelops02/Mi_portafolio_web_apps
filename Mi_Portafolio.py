@@ -49,7 +49,7 @@ APPS = [
     {
         "titulo": "Voz a texto y traducción",
         "descripcion": "Una aplicación que usa la conversión de voz a texto y traduce a varios idiomas.",
-        "imagen": "Traductor_Storybook.jpg",
+        "imagen": "Aperture_2.jpg",
         "url": "https://03vozatextotraductor-n5czjghsaqreazrzvfegab.streamlit.app/",
         "boton": "Abrir voz a texto",
     },
