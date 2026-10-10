@@ -20,17 +20,25 @@ SUBTITULO = (
 )
 
 URL_RECURSOS = "https://sites.google.com/view/aplicacionesdeia/inicio"
-TEXTO_RECURSOS = "Ver páginas y ejercicios prácticos"
+TEXTO_RECURSOS = "Ver micrositio de la asignatura"
 
-SIDEBAR_TITULO = "Aplicaciones con Inteligencia Artificial."
+SIDEBAR_TITULO = "Aplicaciones multimodales."
 SIDEBAR_TEXTO = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso "
-    "de datos, automatizar tareas rutinarias y proporcionar análisis avanzados en "
-    "tiempo real, lo que resulta en una mayor eficiencia y precisión en diversos campos."
+    "En este portafolio, exploramos la variedad de modalidades con las que podemos "
+    "diseñar interacciones en aplicaciones para uso en la vida real. Utilizamos herramientas "
+    "de inteligencia artificial para potenciar nuestras capacidades y desbloquear nuevas formas "
+    "de aprovechar las plataformas tecnológicas. "
 )
 
 # Cada bloque { ... } es una tarjeta. Aparecen de 3 en 3, en el orden de esta lista.
 APPS = [
+    {
+        "titulo": "Aplicación de introducción",
+        "descripcion": "Este fue nuestro primer acercamiento a Streamlit y Github.",
+        "imagen": "sergey-kolesov-mermaid-sharpen.jpg",
+        "url": "https://01appintro-sakccxqvzjtehnd6tkhxnu.streamlit.app/",
+        "boton": "Abrir introducción",
+    },
     {
         "titulo": "Conversión de texto a voz",
         "descripcion": "Una de las aplicaciones de IA que convierte texto escrito en audio.",
