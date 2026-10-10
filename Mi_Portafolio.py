@@ -61,11 +61,11 @@ APPS = [
         "boton": "Abrir OCR",
     },
     {
-        "titulo": "Transcriptor de audio y video",
-        "descripcion": "Cómo realizamos transcripciones de audio y video.",
-        "imagen": "OIG3.jpg",
-        "url": "https://transcript-whisper.streamlit.app/",
-        "boton": "Abrir transcriptor",
+        "titulo": "Traductor OCR",
+        "descripcion": "Analiza el texto de una imagen, lo convierte y traduce al idioma seleccionado.",
+        "imagen": "aperture.jpg",
+        "url": "https://05ocraaudio-ezqjqywvukmhoxojugufse.streamlit.app/",
+        "boton": "Abrir traductor OCR",
     },
     {
         "titulo": "Reconocimiento de objetos",
