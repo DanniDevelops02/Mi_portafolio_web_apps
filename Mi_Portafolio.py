@@ -47,10 +47,10 @@ APPS = [
         "boton": "¡Crea un audio!",
     },
     {
-        "titulo": "Conversión de voz a texto",
-        "descripcion": "Una aplicación que usa la conversión de voz a texto.",
-        "imagen": "OIG8.jpg",
-        "url": "https://traductorw.streamlit.app/",
+        "titulo": "Voz a texto y traducción",
+        "descripcion": "Una aplicación que usa la conversión de voz a texto y traduce a varios idiomas.",
+        "imagen": "Traductor_Storybook.jpg",
+        "url": "https://03vozatextotraductor-n5czjghsaqreazrzvfegab.streamlit.app/",
         "boton": "Abrir voz a texto",
     },
     {
