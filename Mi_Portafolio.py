@@ -42,8 +42,8 @@ APPS = [
     {
         "titulo": "Texto a audio",
         "descripcion": "Esta aplicación utiliza IA básica para convertir texto escrito en audio.",
-        "imagen": "https://02textoaaudio-e7a7ia4qwuljkwhdgzpbgx.streamlit.app/",
-        "url": "https://imultimod.streamlit.app/",
+        "imagen": "Childrens_Storybook",
+        "url": "https://02textoaaudio-e7a7ia4qwuljkwhdgzpbgx.streamlit.app/",
         "boton": "¡Crea un audio!",
     },
     {
