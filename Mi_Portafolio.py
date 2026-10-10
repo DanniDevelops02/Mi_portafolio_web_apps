@@ -40,11 +40,11 @@ APPS = [
         "boton": "Abrir introducción",
     },
     {
-        "titulo": "Conversión de texto a voz",
-        "descripcion": "Una de las aplicaciones de IA que convierte texto escrito en audio.",
-        "imagen": "txt_to_audio2.png",
+        "titulo": "Texto a audio",
+        "descripcion": "Esta aplicación utiliza IA básica para convertir texto escrito en audio.",
+        "imagen": "https://02textoaaudio-e7a7ia4qwuljkwhdgzpbgx.streamlit.app/",
         "url": "https://imultimod.streamlit.app/",
-        "boton": "Abrir texto a voz",
+        "boton": "¡Crea un audio!",
     },
     {
         "titulo": "Conversión de voz a texto",
