@@ -68,6 +68,13 @@ APPS = [
         "boton": "Abrir traductor OCR",
     },
     {
+        "titulo": "Nube de palabras",
+        "descripcion": "Crea una nube de palabras a través de un análisis de texto.",
+        "imagen": "nube_de_palabras.jpg",
+        "url": "https://06nubedepalabras-gwvbxaqrkvp7gvu8k3mm8x.streamlit.app/",
+        "boton": "¡Mira esa nube!",
+    },
+    {
         "titulo": "Reconocimiento de objetos",
         "descripcion": "Cómo se detectan objetos en imágenes.",
         "imagen": "txt_to_audio.png",
