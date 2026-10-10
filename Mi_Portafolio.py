@@ -58,7 +58,7 @@ APPS = [
         "descripcion": "Una aplicacion que reconoce carácteres en imágenes",
         "imagen": "OCR_1.jpg",
         "url": "https://04imagenatextoocr-chcwdfglnahz4bewex9nrk.streamlit.app/",
-        "boton": "Abrir transcriptor",
+        "boton": "Abrir OCR",
     },
     {
         "titulo": "Transcriptor de audio y video",
