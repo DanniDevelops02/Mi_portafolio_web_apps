@@ -13,7 +13,7 @@ st.set_page_config(
 #  CONTENIDO EDITABLE: cambia aquí textos, enlaces e imágenes
 # =====================================================================
 ETIQUETA = "Portafolio · Daniel Flórez"
-TITULO = "Aplicaciones de Inteligencia Artificial"
+TITULO = "Aplicaciones multimodales"
 SUBTITULO = (
     "Una colección de aplicaciones web que exploran cómo la inteligencia "
     "artificial se integra con voz, imagen, datos y el mundo físico."
