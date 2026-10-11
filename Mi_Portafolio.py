@@ -90,9 +90,9 @@ APPS = [
     },
     {
         "titulo": "Reconocimiento de objetos",
-        "descripcion": "Cómo se detectan objetos en imágenes.",
-        "imagen": "txt_to_audio.png",
-        "url": "https://yolov5cmc.streamlit.app/",
+        "descripcion": "Detector de objetos con la cámara en tiempo real.",
+        "imagen": "objetos.png",
+        "url": "https://09visionyolov5-vstbsapkghfwcytxo2p6ou.streamlit.app/",
         "boton": "Abrir YOLO",
     },
     {
