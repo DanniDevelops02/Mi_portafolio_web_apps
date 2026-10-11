@@ -91,7 +91,7 @@ APPS = [
     {
         "titulo": "Reconocimiento de objetos",
         "descripcion": "Detector de objetos con la cámara en tiempo real.",
-        "imagen": "objetos.png",
+        "imagen": "objetos.jpg",
         "url": "https://09visionyolov5-vstbsapkghfwcytxo2p6ou.streamlit.app/",
         "boton": "Abrir YOLO",
     },
