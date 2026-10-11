@@ -82,6 +82,13 @@ APPS = [
         "boton": "¡Mira esa nube!",
     },
     {
+        "titulo": "Análisis de texto",
+        "descripcion": "Una mini IA analizará tu texto y puede responder preguntas sobre el.",
+        "imagen": "libreria.jpg",
+        "url": "https://08tdfesp-yzgqkaovuc2wqkauh7dfxs.streamlit.app/",
+        "boton": "Abrir TF-IDF",
+    },
+    {
         "titulo": "Reconocimiento de objetos",
         "descripcion": "Cómo se detectan objetos en imágenes.",
         "imagen": "txt_to_audio.png",
@@ -89,41 +96,13 @@ APPS = [
         "boton": "Abrir YOLO",
     },
     {
-        "titulo": "Análisis de imagen",
-        "descripcion": "La capacidad de análisis sobre imágenes.",
-        "imagen": "OIG4.jpg",
-        "url": "https://vision2-gpt4o.streamlit.app/",
-        "boton": "Abrir visión",
+        "titulo": "Teachable machine de poses",
+        "descripcion": "Con este modelo de poses de teachable machine puedes bailar al ritmo de uno de los hits de la música disco.",
+        "imagen": "YMCA.jpg",
+        "url": "https://10teachablemachine-k844grob8fhw7fpecsfuae.streamlit.app/",
+        "boton": "¡A bailar!",
     },
-    {
-        "titulo": "Sistema ciberfísico",
-        "descripcion": "La capacidad de interacción con el mundo físico.",
-        "imagen": "OIG6.jpg",
-        # OJO: esta URL es la misma que "Análisis de imagen". Revísala.
-        "url": "https://vision2-gpt4o.streamlit.app/",
-        "boton": "Abrir sistema ciberfísico",
-    },
-    {
-        "titulo": "Entrenando modelos",
-        "descripcion": "Cómo puedes usar tu propio modelo entrenado.",
-        "imagen": "OIG5.jpg",
-        "url": "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/",
-        "boton": "Abrir modelo entrenado",
-    },
-    {
-        "titulo": "Análisis de datos",
-        "descripcion": "Cómo se pueden analizar datos usando agentes.",
-        "imagen": "data_analisis.png",
-        "url": "https://dataagente.streamlit.app/",
-        "boton": "Abrir análisis de datos",
-    },
-    {
-        "titulo": "Generación en contexto",
-        "descripcion": "Una aplicación que usa RAG a partir de un documento PDF.",
-        "imagen": "Chat_pdf.png",
-        "url": "https://chatpdf-cc.streamlit.app/",
-        "boton": "Abrir RAG",
-    },
+    
 ]
 
 # =====================================================================
