@@ -75,6 +75,13 @@ APPS = [
         "boton": "¡Mira esa nube!",
     },
     {
+        "titulo": "Análisis de sentimientos",
+        "descripcion": "Suelta tus pensamientos en esta app y analiza cómo te sientes.",
+        "imagen": "expresiones.jpg",
+        "url": "https://pv9xsb7ja2waas3dlhuxvl.streamlit.app/",
+        "boton": "¡Mira esa nube!",
+    },
+    {
         "titulo": "Reconocimiento de objetos",
         "descripcion": "Cómo se detectan objetos en imágenes.",
         "imagen": "txt_to_audio.png",
