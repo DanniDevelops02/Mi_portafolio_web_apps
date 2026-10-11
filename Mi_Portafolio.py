@@ -79,7 +79,7 @@ APPS = [
         "descripcion": "Suelta tus pensamientos en esta app y analiza cómo te sientes.",
         "imagen": "expresiones.jpg",
         "url": "https://pv9xsb7ja2waas3dlhuxvl.streamlit.app/",
-        "boton": "¡Mira esa nube!",
+        "boton": "¿Cómo te sientes?",
     },
     {
         "titulo": "Análisis de texto",
