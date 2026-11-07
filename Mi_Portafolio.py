@@ -102,6 +102,13 @@ APPS = [
         "url": "https://10teachablemachine-k844grob8fhw7fpecsfuae.streamlit.app/",
         "boton": "¡A bailar!",
     },
+    {
+        "titulo": "Chatea con tu PDF",
+        "descripcion": "Utiliza la IA para analizar y estudiar a partir de tus documentos de clase.",
+        "imagen": "LofiGirl.jpg",
+        "url": "https://11chatpdf-tkiptlct7ka92dmrg5njyb.streamlit.app/",
+        "boton": "Hora de estudiar",
+    },
     
 ]
 
