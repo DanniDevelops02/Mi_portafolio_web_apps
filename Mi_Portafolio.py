@@ -109,6 +109,13 @@ APPS = [
         "url": "https://11chatpdf-tkiptlct7ka92dmrg5njyb.streamlit.app/",
         "boton": "Hora de estudiar",
     },
+     {
+        "titulo": "App visión",
+        "descripcion": "Utiliza la IA para analizar y preguntar sobre las imágenes que cargues.",
+        "imagen": "AppVision.jpg",
+        "url": "https://12appvision-9pzjr25w7q9nemnjxmpfrw.streamlit.app/",
+        "boton": "Veo veo, ¿Qué ves?",
+    },
     
 ]
 
