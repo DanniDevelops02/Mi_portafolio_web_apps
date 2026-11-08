@@ -116,6 +116,13 @@ APPS = [
         "url": "https://12appvision-9pzjr25w7q9nemnjxmpfrw.streamlit.app/",
         "boton": "Veo veo, ¿Qué ves?",
     },
+    {
+        "titulo": "Detección de dígitos",
+        "descripcion": "Escribe a mano y una red neuronal determinará que número estás escribiendo.",
+        "imagen": "AppDigitos.jpg",
+        "url": "https://13mnistpred-rcwtekuo2zgw6vm7omnfnt.streamlit.app/",
+        "boton": "¿Qué número es este?",
+    },
     
 ]
 
