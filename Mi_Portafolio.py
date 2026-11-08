@@ -130,6 +130,13 @@ APPS = [
         "url": " https://14drawrecognizer-jj3appppwayywm7hv3cx7mdq.streamlit.app/",
         "boton": "¿Qué opinas de este dibujo?",
     },
+    {
+        "titulo": "Acertijos de aprendizaje",
+        "descripcion": "Dibuja correctamente a partir de un acertijo y aprende cosas nuevas en el espacio de clase.",
+        "imagen": "15_App_acertijos.jpg",
+        "url": "https://15tableroacertijos-zakrtzrcv7gm4ivzepud8x.streamlit.app/",
+        "boton": "Aprende mientras dibujas",
+    },
 ]
 
 # =====================================================================
