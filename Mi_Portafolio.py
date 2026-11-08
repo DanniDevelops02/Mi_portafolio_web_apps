@@ -137,6 +137,13 @@ APPS = [
         "url": "https://15tableroacertijos-zakrtzrcv7gm4ivzepud8x.streamlit.app/",
         "boton": "Aprende mientras dibujas",
     },
+     {
+        "titulo": "Sensor MQTT",
+        "descripcion": "Probemos la conexión de una app web con un sistema cyberfísico dentro de una simulación de Wokwi.",
+        "imagen": "16_Sensor_MQTT.jpg",
+        "url": "https://16sensormqtt-a94knqy3jcwvmszsvt9rgt.streamlit.app/",
+        "boton": "Abrir app",
+    },
 ]
 
 # =====================================================================
