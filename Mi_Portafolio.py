@@ -123,7 +123,13 @@ APPS = [
         "url": "https://13mnistpred-rcwtekuo2zgw6vm7omnfnt.streamlit.app/",
         "boton": "¿Qué número es este?",
     },
-    
+    {
+        "titulo": "Detección de dibujos",
+        "descripcion": "Dibuja una pieza artística y deja que la IA te sorprenda con su interpretación de tu arte.",
+        "imagen": "App_Tablero.jpg",
+        "url": " https://14drawrecognizer-jj3appppwayywm7hv3cx7mdq.streamlit.app/",
+        "boton": "¿Qué opinas de este dibujo?",
+    },
 ]
 
 # =====================================================================
