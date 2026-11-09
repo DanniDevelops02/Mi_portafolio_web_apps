@@ -144,6 +144,13 @@ APPS = [
         "url": "https://16sensormqtt-a94knqy3jcwvmszsvt9rgt.streamlit.app/",
         "boton": "Abrir app",
     },
+    {
+        "titulo": "Control Remoto MQTT",
+        "descripcion": "Controla el sistema del servomotor desde esta web app conectada con wokwi.",
+        "imagen": "17_Control_MQTT.jpg",
+        "url": " https://17controlmqtt-ptczhyedbc2hy6cgcsdg9d.streamlit.app/",
+        "boton": "Abrir app",
+    },
 ]
 
 # =====================================================================
