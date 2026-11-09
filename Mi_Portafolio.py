@@ -151,6 +151,13 @@ APPS = [
         "url": " https://17controlmqtt-ptczhyedbc2hy6cgcsdg9d.streamlit.app/",
         "boton": "Abrir app",
     },
+    {
+        "titulo": "Control Por Voz MQTT",
+        "descripcion": "Controla a través de tu voz el sitema físico con el simulador de wokwi.",
+        "imagen": "18_App_Control_Voz.jpg",
+        "url": "https://18controlvoz-mugfxauvpyvygrl9vpjwag.streamlit.app/",
+        "boton": "Abrir app",
+    },
 ]
 
 # =====================================================================
